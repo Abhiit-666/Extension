@@ -13,6 +13,7 @@
 
     "permissions":[
         "tabs",
-        "activeTab"
+        "activeTab",
+        "webRequest","webRequestBlocking", "http://*/", "https://*/"
     ]
 }

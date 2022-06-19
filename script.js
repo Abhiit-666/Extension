@@ -5,4 +5,13 @@ setInterval(function(){
         skipButton[0].click();
     }
 
-},1000)
+},1);
+
+chrome=require("chrome")
+chrome.webRequest.onBeforeRequest.addListener(
+    function(details) {
+      return {cancel: details.url.indexOf("://www.evil.com/") != -1};
+    },
+    {urls: ["<all_urls>"]},
+    ["blocking"]
+  );
