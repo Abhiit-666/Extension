@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+
+    "name":"ADSKIP",
+    "description":"ADSKIPPER",
+    "version":"1.0",
+    
+    "content_scripts":[{
+        "js":["script.js"],
+        "run_at":"document_idle",
+        "matches":["<all_urls>"]
+    }],
+
+    "permissions":[
+        "tabs",
+        "activeTab"
+    ]
+}
